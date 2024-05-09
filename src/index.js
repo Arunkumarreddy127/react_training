@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import App from './App.js';
 
 // initial template code.
 // import App from './App';
@@ -106,33 +107,33 @@ import './index.css';
 // }
 
 
-function App() {
-  const[age] = useState(34);
-  const[maths, setMaths] = useState(50);
-  const[physics, setPhysics] = useState(60);
-  const[chemistry, setChesmistry] = useState(70);
-  const[total, setTotal] = useState(0);
+// function App() {
+//   const[age] = useState(34);
+//   const[maths, setMaths] = useState(50);
+//   const[physics, setPhysics] = useState(60);
+//   const[chemistry, setChesmistry] = useState(70);
+//   const[total, setTotal] = useState(0);
 
-  useEffect(() => {
-    setTotal(maths+physics+chemistry);
-  })
-  const update = () =>{
-    setMaths(maths+10)
-    setPhysics(physics+10)
-    setChesmistry(chemistry+10)
-  }
+//   useEffect(() => {
+//     setTotal(maths+physics+chemistry);
+//   })
+//   const update = () =>{
+//     setMaths(maths+10)
+//     setPhysics(physics+10)
+//     setChesmistry(chemistry+10)
+//   }
 
-  return(
-    <div>
-      <p>Arun {age}</p>
+//   return(
+//     <div>
+//       <p>Arun {age}</p>
       
-      <p>Maths : {maths}</p>
-      <p>physics : {physics}</p>
-      <p>chemistry : {chemistry}</p>
-      <p>Total : {total}</p>
-      <button onClick={() => update()}>Update</button>
-    </div>
-  )
-}
+//       <p>Maths : {maths}</p>
+//       <p>physics : {physics}</p>
+//       <p>chemistry : {chemistry}</p>
+//       <p>Total : {total}</p>
+//       <button onClick={() => update()}>Update</button>
+//     </div>
+//   )
+// }
 
 ReactDOM.render(<App />, document.getElementById("root"));
