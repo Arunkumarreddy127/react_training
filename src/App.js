@@ -1,7 +1,7 @@
 import Home from './Home'
 import Contact from './Contact'
 import React from 'react';
-import { HashRouter as Router,Route,NavLink} from "react-router-dom"
+import { HashRouter, Route,NavLink} from "react-router-dom"
  
 class App extends React.Component{
   render()
