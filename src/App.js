@@ -1,29 +1,32 @@
 import Home from './Home'
 import Contact from './Contact'
 import React from 'react';
-import { HashRouter, Route,NavLink} from "react-router-dom"
+import { HashRouter, Route} from "react-router-dom"
+import Header from './Header';
+import Navigation from './Navigation';
+import Footer from './Footer';
+import AboutUs from './AboutUs';
+import Store from './Store';
+import Product from './Product';
  
 class App extends React.Component{
   render()
   {
     return(
+      <div>
       <HashRouter>
-        <div>
-          <ul>
-            <li>
-              <NavLink to="/home"> Home </NavLink>
-            </li>
- 
-            <li>
-              <NavLink to="/contact"> Contact </NavLink>
-            </li>
-          </ul>
- 
-            <Route path="/home" component={Home}/>
-            <Route path="/contact" component={Contact}/>
-     
+        <Header />
+        <Navigation />
+        <div className="container">
+          <Route path="/home" component={Home}/>
+          <Route path="/about-us" component={AboutUs}/>
+          <Route path="/store" component={Store}/>
+          <Route path="/contact-us" component={Contact}/>
+          <Route path="/product/:id" component={Product}/>
         </div>
+        <Footer />
       </HashRouter>
+    </div>
     )
   }
 }
